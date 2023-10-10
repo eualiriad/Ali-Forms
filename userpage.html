@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Participante</title>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+    <main>
+        <header>
+            <section>
+                <h1>Cadastro do Participante</h1>
+                <p>Não perca tempo, e garanta agora mesmo a sua vaga com a gente!</p>
+            </section>
+        </header>
+        <form action=""> <!-- 'Action' é o endereço de envio do formulario quando preenchido pelo user -->
+            <p>
+                <label for="input-name"> Nome Completo: </label> <br/>
+                <input id="input-name" type="text" required 
+                    name="nome" placeholder="Digite seu nome aqui..." />
+            </p>
+            <p>
+                <label for="input-mail"> Seu melhor e-mail: </label> <br/>
+                <input id="input-mail" type="email" required 
+                    name="e-mail" placeholder="Digite seu email aqui..." />
+            </p>
+            <p>
+                <label for="describe"> O que o motivou a participar do nosso evento? </label> <br/>
+                <textarea
+                    id="describe"
+                    placeholder="Digite sua mensagem..."
+                    cols="50"
+                    rows="3"
+                    name="descrição"
+                ></textarea>
+            </p>
+            <p>
+                <label for="select"> Escolha seu nível para o curso: </label> <br/>
+                <select id="select">
+                    <option value="" selected disabled>
+                        Seu nível
+                    </option>
+                    <option value="iniciante">
+                        Iniciante
+                    </option>
+                    <option value="intermediario">
+                        Intermediario
+                    </option>
+                    <option value="avançado">
+                        Avançado
+                    </option>
+                    <option value="mestre">
+                        Mestre
+                    </option>
+                </select>
+            </p>
+            <p>
+                <label for="input-password">Cadastre uma senha: </label> <br/>
+                <input id="input-password" type="password" required 
+                    name="senha" minlength="6" placeholder="*******"/><br/>
+            </p>
+            <p>
+                <label for="C-senha"> Confirme sua senha: </label> <br/>
+                <input id="C-senha" type="password" required=
+                    minlength="6" placeholder="*******"/>
+            </p>
+            <p>
+                <p>Gostaria de receber novidades do curso em seu e-mail?</p>
+                
+                <label for="radio-yes">Sim</label>
+                <input id="radio-yes" type="radio" value="yes" name="DesejaReceberNovidades"/>
+
+                <label for="radio-no">Não</label>
+                <input id="radio-no" type="radio" value="no" name="DesejaReceberNovidades"/>
+            </p>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+    <aside>
+
+    </aside>
+    <footer>
+        
+    </footer>
+</body>
+</html>

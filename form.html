@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Type</title>
+</head>
+<body>
+
+    <h2> Tag form </h2>
+
+    <form>
+        <input type="date"/>
+        <input type="text" placeholder="Mom's Name" maxlength="4"/>
+        <!-- maxlength é o numero de caracteres -->
+        <input type="number" placeholder="Mom's Age" maxlength="4"/>
+        <!-- number não permite letras -->
+        <br/>
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Password" maxlength="4" required="true"/>
+
+        <label for="senhaConfirmar">Confirmar Senha</label>
+        <input type="password" id="senhaConfirmar" name="senhaConfirmar" placeholder="Password again" maxlength="4" required="true"/>
+
+        <button type="submit">Cadastrar</button>
+
+        <!-- o 'label' pergunta a quem ele serve através do 'for'  -->
+        <!-- o 'input' indica ao 'label' que ele deve servi-lo, através do 'id' -->
+        <!-- perceba que o 'for' e o 'id' devem possuir o mesmo nome!!! -->
+        <!-- o tributo 'name' faz com que os dados colocados pelo usuario no 'input' constem na URL da page
+            Isso é inseguro, mas devo aprender pra algo no futuro -->
+        <!-- o atributo 'required' faz com que o usuario seja obrigado a preencher o input -->
+
+        <!-- 'id' faz referencia ao 'label'
+            'name' faz referencia ao input em si
+            'name' pode ser diferente do 'for'
+        
+            Atributo for no <label>
+            Atributo id no <input>  -->
+
+    </form>
+    
+    <br/>
+    <h2> Radio type </h2>
+    <form>
+        <p>Qual o método de contato de preferência?</p>
+
+        <label for="">E-mail</label>
+        <input type="radio" required name="MetodoDeContato" value="email"/>
+
+        <label for="">Telefone</label>
+        <input type="radio" required name="MetodoDeContato" value="telefone"/>
+
+        <label for="">Whatsapp</label>
+        <input type="radio" required name="MetodoDeContato" value="whatsapp"/>
+
+        <button type="submit">Enviar</button>
+
+        <!-- <input type='radio'/> sozinho faz com que os botões fiquem pra sempre selecionados
+            colocando o atributo 'name' ou 'required name' os botões selecionam apenas uma opção -->
+        <!-- colocando o atributo 'value', nosso input irá enviar o valor desejado a URL  -->
+        
+        
+    </form>
+    <br/>
+<!-- Outro Exemplo -->
+    <form>
+        <p>Selecione o método de contato</p>
+    
+        <label for="telefone">Telefone</label>
+        <input type="radio" value="telefone" name="inputExemplo" id="telefone">
+    
+        <label for="e-mail">E-mail</label>
+        <input type="radio" value="email" name="inputExemplo" id="e-mail">
+    
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br/>
+
+<h2> Tag Select </h2>
+
+    <select>
+        <option value="">
+            Escolher Plano
+        </option>
+        <option value="free">
+            Free
+        </option>
+        <option value="premium">
+            Premium
+        </option>
+        <option value="pro">
+            Pro
+        </option>
+    </select>
+<!-- Até agora ele não enviou informações para a URL, para isso iremos utilizar o atributo 'name' -->
+<!-- 'value' é o mesmo que o 'name', porém 'value' é usado na tag 'option' -->
+    <br/>
+
+    <form>
+        <label for="plano">Plano</label>
+<!-- 'For' e 'id' devem ser iguais até nas letras maiusculas ou minuscula!!! -->
+        <select id="plano" name="plano" required="true">
+            <option value="">     Escolher Plano       </option>
+            <option value="free">        Free       </option>
+            <option value="premium">       Premium      </option>
+            <option value="pro">        Pro       </option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <br/>
+
+    <h2> Tag Textarea </h2>
+
+    <form>
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" placeholder="Digite sua mensagem..."></textarea>
+            <!-- Para que o placeholder funcione, não pode haver espaços entre as tags do textarea!  -->
+        <br/>
+
+        <!-- Cols: Colunas -->
+        <!-- Rows: Linhas -->
+        <label for="ms">Mensagem</label>
+        <textarea id="ms" name="mensagem" placeholder="Digite sua mensagem..." cols="50" rows="5"></textarea>
+
+    </form><br/>
+
+<!-- melhorando -->
+    <form action="">
+        <label for="msg1">Mensagem</label>
+        <textarea 
+            id="msg1"
+            name="mensagem" 
+            placeholder="Digite sua mensagem..."
+            cols="50" rows="5"
+            required="true"
+        ></textarea>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+</body>
+
+</html>
